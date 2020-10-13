@@ -8,8 +8,10 @@ You can find Gerbil on Docker by following the instructions found in the [Gerbil
 ## Running the Programs With Suitable Flags
 When adding memory limits to an executable's run-time, there are currently two steps involved. In the case of `different`, with a memory limit of `1024M`, those steps would be:
 
-`gxc -exe -s -d `pwd` -v solution.ss`
-`gsc -:i8,f8,-8,t8,max-heap=1024M -exe -o solution solution.scmx`
+~~~
+gxc -exe -s -d `pwd` -v solution.ss
+gsc -:i8,f8,-8,t8,max-heap=1024M -exe -o solution solution.scmx
+~~~
 
 ## Error Messages
 Generally, all the error messages displayed are safe to present to the programmer.
