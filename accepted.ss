@@ -2,4 +2,7 @@
 
 (export main)
 
-(def (main . _) (defvalues (a b) (values (read) (read))) (when (every number? [a b]) (displayln (abs (- a b))) (main)))
+(def (main . _)
+  (defvalues (a b) (values (read) (read)))
+  (when (every number? [a b])
+    (displayln (abs (- a b))) (main)))
