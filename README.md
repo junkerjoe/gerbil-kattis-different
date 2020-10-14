@@ -6,11 +6,11 @@ In this repo I've included submissions, with the help of the very friendly [#ger
 You can find Gerbil on Docker by following the instructions found in the [Gerbil Guide](https://cons.io/guide/#skip-the-install-get-started-on-docker).
 
 ## Running the Programs With Suitable Flags
-When adding memory limits to an executable's run-time, there are currently two steps involved. In the case of [different](https://open.kattis.com/problems/different), with a memory limit of `1024M`, those steps would be:
+When adding memory limits to an executable's run-time, in the case of [different](https://open.kattis.com/problems/different), with a memory limit of `1024M`, this would look like:
 
 ~~~
-gxc -exe -s -d `pwd` -v solution.ss
-gsc -:i8,f8,-8,t8,max-heap=1024M -exe -o solution solution.scmx
+gxc -exe -O -static -v solution.ss
+./solution -:max-heap=1024M
 ~~~
 
 ## Error Messages
